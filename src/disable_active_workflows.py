@@ -1,5 +1,4 @@
 # disable active GitHub workflows
-import sys
 import requests
 
 def get_all_workflows(owner, repository, token):
@@ -19,9 +18,9 @@ def determine_active_workflows(all_workflows):
 
     for workflow in all_workflows['workflows']:
         #print(f"{workflow['name']}: {workflow['state']}")
-        
+
         if workflow['state'] == "active":
-            active_workflows.append(workflow) 
+            active_workflows.append(workflow)
 
     return active_workflows
 
@@ -44,7 +43,6 @@ def disable_workflows(active_workflows, owner, repository, token):
 def main():
     owner = "hakohl"
     repository = "study-github"
-    #repository = "project-disable-active-workflows"
     token = ""
 
     print(f"Handle workflows in GitHub repository \"{repository}\".")
@@ -52,7 +50,7 @@ def main():
     all_workflows = get_all_workflows(owner, repository, token)
     if all_workflows['total_count'] == 0:
         raise Exception(f"There are no workflows in repository \"{repository}\"!")
-    
+
     print("Determine active workflows ...")
     active_workflows = determine_active_workflows(all_workflows)
     if active_workflows == []:
