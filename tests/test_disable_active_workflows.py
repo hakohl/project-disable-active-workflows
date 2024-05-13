@@ -9,7 +9,7 @@ def test_get_all_workflows_workflows_exist():
 
 def test_get_all_workflows_workflows_no_exist():
     owner = "hakohl"
-    repository = "project-disable-active-workflows"
+    repository = "test-repo-without-workflows"
     token = ""
   
     assert get_all_workflows(owner, repository, token)['total_count'] == 0
