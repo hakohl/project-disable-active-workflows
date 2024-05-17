@@ -27,7 +27,7 @@ def test_determine_active_workflows_exist():
              'url': 'https://api.github.com/repos/hakohl/study-github/actions/workflows/87866223',
              'html_url': 'https://github.com/hakohl/study-github/blob/main/.github/workflows/exercise-cli-github.yml',
              'badge_url': 'https://github.com/hakohl/study-github/workflows/exercise-cli-github/badge.svg'
-            },
+             },
             {'id': 88635874,
              'node_id': 'W_kwDOJzK9uc4FSHni',
              'name': 'exercise-rest-api-cli-github',
@@ -38,7 +38,7 @@ def test_determine_active_workflows_exist():
              'url': 'https://api.github.com/repos/hakohl/study-github/actions/workflows/88635874',
              'html_url': 'https://github.com/hakohl/study-github/blob/main/.github/workflows/exercise-rest-api-cli-github.yml',
              'badge_url': 'https://github.com/hakohl/study-github/workflows/exercise-rest-api-cli-github/badge.svg'
-            },
+             },
             {'id': 88736327,
              'node_id': 'W_kwDOJzK9uc4FSgJH',
              'name': 'exercise-rest-api-curl-github',
@@ -49,7 +49,7 @@ def test_determine_active_workflows_exist():
              'url': 'https://api.github.com/repos/hakohl/study-github/actions/workflows/88736327',
              'html_url': 'https://github.com/hakohl/study-github/blob/main/.github/workflows/exercise-rest-api-curl-github.yml',
              'badge_url': 'https://github.com/hakohl/study-github/workflows/exercise-rest-api-curl-github/badge.svg'
-            },
+             },
             {'id': 63633678,
              'node_id': 'W_kwDOJzK9uc4DyvkO',
              'name': 'GitHub-Actions-Demo',
@@ -60,7 +60,7 @@ def test_determine_active_workflows_exist():
              'url': 'https://api.github.com/repos/hakohl/study-github/actions/workflows/63633678',
              'html_url': 'https://github.com/hakohl/study-github/blob/main/.github/workflows/github-actions-demo.yml',
              'badge_url': 'https://github.com/hakohl/study-github/workflows/GitHub-Actions-Demo/badge.svg'
-            }
+             }
         ]
     }
 
@@ -75,7 +75,7 @@ def test_determine_active_workflows_exist():
          'url': 'https://api.github.com/repos/hakohl/study-github/actions/workflows/87866223',
          'html_url': 'https://github.com/hakohl/study-github/blob/main/.github/workflows/exercise-cli-github.yml',
          'badge_url': 'https://github.com/hakohl/study-github/workflows/exercise-cli-github/badge.svg'
-        },
+         },
         {'id': 88736327,
          'node_id': 'W_kwDOJzK9uc4FSgJH',
          'name': 'exercise-rest-api-curl-github',
@@ -86,7 +86,7 @@ def test_determine_active_workflows_exist():
          'url': 'https://api.github.com/repos/hakohl/study-github/actions/workflows/88736327',
          'html_url': 'https://github.com/hakohl/study-github/blob/main/.github/workflows/exercise-rest-api-curl-github.yml',
          'badge_url': 'https://github.com/hakohl/study-github/workflows/exercise-rest-api-curl-github/badge.svg'
-        }
+         }
     ]
 
 def test_determine_active_workflows_no_exist():
@@ -102,7 +102,7 @@ def test_determine_active_workflows_no_exist():
              'url': 'https://api.github.com/repos/hakohl/study-github/actions/workflows/87866223',
              'html_url': 'https://github.com/hakohl/study-github/blob/main/.github/workflows/exercise-cli-github.yml',
              'badge_url': 'https://github.com/hakohl/study-github/workflows/exercise-cli-github/badge.svg'
-            },
+             },
             {'id': 88635874,
              'node_id': 'W_kwDOJzK9uc4FSHni',
              'name': 'exercise-rest-api-cli-github',
@@ -111,9 +111,9 @@ def test_determine_active_workflows_no_exist():
              'created_at': '2024-03-06T15:39:55.000Z',
              'updated_at': '2024-03-07T09:25:12.000Z',
              'url': 'https://api.github.com/repos/hakohl/study-github/actions/workflows/88635874',
-             'html_url': 'https://github.com/hakohl/study-github/blob/main/.github/workflows/exercise-rest-api-cli-github.yml', 
+             'html_url': 'https://github.com/hakohl/study-github/blob/main/.github/workflows/exercise-rest-api-cli-github.yml',
              'badge_url': 'https://github.com/hakohl/study-github/workflows/exercise-rest-api-cli-github/badge.svg'
-            },
+             },
             {'id': 88736327,
              'node_id': 'W_kwDOJzK9uc4FSgJH',
              'name': 'exercise-rest-api-curl-github',
@@ -124,7 +124,7 @@ def test_determine_active_workflows_no_exist():
              'url': 'https://api.github.com/repos/hakohl/study-github/actions/workflows/88736327',
              'html_url': 'https://github.com/hakohl/study-github/blob/main/.github/workflows/exercise-rest-api-curl-github.yml',
              'badge_url': 'https://github.com/hakohl/study-github/workflows/exercise-rest-api-curl-github/badge.svg'
-            },
+             },
             {'id': 63633678,
              'node_id': 'W_kwDOJzK9uc4DyvkO',
              'name': 'GitHub-Actions-Demo',
@@ -135,7 +135,7 @@ def test_determine_active_workflows_no_exist():
              'url': 'https://api.github.com/repos/hakohl/study-github/actions/workflows/63633678',
              'html_url': 'https://github.com/hakohl/study-github/blob/main/.github/workflows/github-actions-demo.yml',
              'badge_url': 'https://github.com/hakohl/study-github/workflows/GitHub-Actions-Demo/badge.svg'
-            }
+             }
         ]
     }
 
@@ -168,7 +168,7 @@ def test_disable_workflows():
          'url': 'https://api.github.com/repos/hakohl/study-github/actions/workflows/87866223',
          'html_url': 'https://github.com/hakohl/study-github/blob/main/.github/workflows/exercise-cli-github.yml',
          'badge_url': 'https://github.com/hakohl/study-github/workflows/exercise-cli-github/badge.svg'
-        },
+         },
         {'id': 88736327,
          'node_id': 'W_kwDOJzK9uc4FSgJH',
          'name': 'exercise-rest-api-curl-github',
@@ -179,7 +179,7 @@ def test_disable_workflows():
          'url': 'https://api.github.com/repos/hakohl/study-github/actions/workflows/88736327',
          'html_url': 'https://github.com/hakohl/study-github/blob/main/.github/workflows/exercise-rest-api-curl-github.yml',
          'badge_url': 'https://github.com/hakohl/study-github/workflows/exercise-rest-api-curl-github/badge.svg'
-        }
+         }
     ]
 
     assert disable_workflows(active_workflows, owner, repository, token) == 0
