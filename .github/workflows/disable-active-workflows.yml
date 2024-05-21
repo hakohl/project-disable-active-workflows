@@ -37,8 +37,8 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytest, including coverage analyses
         run: |
-          pytest --cov=src tests/ --cov-report term-missing
-          #pytest --html=report.html --cov=src tests/ --cov-report html:cov_html
+          pytest -v --cov=src tests/ --cov-report term-missing
+          #pytest -v --html=report.html --cov=src tests/ --cov-report html:cov_html
       #- name: Setup Pages
       #  uses: actions/configure-pages@v5
       #- name: Upload artifact
