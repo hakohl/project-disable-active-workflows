@@ -37,15 +37,14 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytest, including coverage analyses
         run: |
-          pytest -v --cov=src tests/ --cov-report term-missing
-          #pytest -v --html=report.html --cov=src tests/ --cov-report html:cov_html
-      #- name: Setup Pages
-      #  uses: actions/configure-pages@v5
-      #- name: Upload artifact
-      #  uses: actions/upload-pages-artifact@v3
-      #  with:
-      #    # Upload entire repository
-      #    path: '.'
-      #- name: Deploy to GitHub Pages
-      #  id: deployment
-      #  uses: actions/deploy-pages@v4
+          #pytest -v --cov=src tests/ --cov-report term-missing
+          pytest -v --html=reports/index.html --cov=src tests/ --cov-report html:cov_html
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'reports/'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
