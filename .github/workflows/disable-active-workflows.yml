@@ -43,16 +43,17 @@ jobs:
       - name: Upload unit test artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          name: unit-test-report
           path: reports
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Coverage test with pytest (pytest-cov)
         run: |
-          pytest -v --cov=src tests/ --cov-report term-missing > coverage_report.txt
+          pytest -v --cov=src tests/ --cov-report term-missing > coverage_test_report.txt
           #pytest -v --cov=src tests/ --cov-report html:cov_html
       - name: Upload coverage test artifact
         uses: actions/upload-artifact@v4
         with:
-          name: coverage-report
-          path: coverage_report.txt
+          name: coverage-test-report
+          path: coverage_test_report.txt
