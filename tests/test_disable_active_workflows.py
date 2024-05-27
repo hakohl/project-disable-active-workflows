@@ -1,4 +1,4 @@
-from ..src.disable_active_workflows import *
+from ..src import disable_active_workflows
 
 #import sys
 #sys.path.append(r'/home/harald/git/project_python/project-disable-active-workflows/disable_active_workflows')
