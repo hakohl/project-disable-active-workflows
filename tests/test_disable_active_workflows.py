@@ -1,13 +1,13 @@
-#from disable_active_workflows import *
+from src.disable_active_workflows import *
 
 #import sys
 #sys.path.append(r'/home/harald/git/project_python/project-disable-active-workflows/disable_active_workflows')
 #from disable_active_workflows import *
 
-disable_active_workflows = __import__("disable_active_workflows.py")
-get_all_workflows = disable_active_workflows.get_all_workflows
-determine_active_workflows = disable_active_workflows.determine_active_workflows
-disable_workflows = disable_active_workflows.disable_workflows
+#disable_active_workflows = __import__("disable_active_workflows.py")
+#get_all_workflows = disable_active_workflows.get_all_workflows
+#determine_active_workflows = disable_active_workflows.determine_active_workflows
+#disable_workflows = disable_active_workflows.disable_workflows
 
 def test_get_all_workflows_workflows_exist():
     owner = "hakohl"
