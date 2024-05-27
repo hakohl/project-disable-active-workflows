@@ -1,4 +1,10 @@
-from ..src import disable_active_workflows
+import sys
+import os
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(script_dir))
+
+from src.disable_active_workflows import *
 
 #import sys
 #sys.path.append(r'/home/harald/git/project_python/project-disable-active-workflows/disable_active_workflows')
