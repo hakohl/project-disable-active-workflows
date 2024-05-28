@@ -6,6 +6,6 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "disable-active-workflows"
-version = "1.0.0"
+version = "2.0.0"
 description = "Disable active workflows in a repository"
 readme = "README.md"
