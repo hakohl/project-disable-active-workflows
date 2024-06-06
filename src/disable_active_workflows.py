@@ -1,4 +1,5 @@
 # disable active GitHub workflows
+import argparse
 import requests
 
 def get_all_workflows(owner, repository, token):
@@ -35,17 +36,44 @@ def disable_workflows(active_workflows, owner, repository, token):
             auth=("", token)
         )
 
+        if not response:
+            raise Exception(f"Non-success status code: {response.status_code} - {response.text}")
+
         print(f"Workflow \"{workflow['name']}\" was disabled.")
         num_active_workflows -= 1
 
     return num_active_workflows
 
 def main():
-    owner = "hakohl"
-    repository = "study-github"
+    parser = argparse.ArgumentParser(
+        prog="disable_active_workflows",
+        description="Disable active workflows"
+    )
+
+    parser.add_argument("owner", nargs=1, help="GitHub account name")
+    parser.add_argument("repository", nargs=1, help="GitHub repository name")
+
+    args=parser.parse_args()
+
+    owner = args.owner[0]
+    repository = args.repository[0]
+
+    api_url = f"https://api.github.com/repos/{owner}/{repository}"
     token = ""
 
-    print(f"Handle workflows in GitHub repository \"{repository}\".")
+    response = requests.get(
+        api_url,
+        auth=("", token)
+    )
+    
+    if not response:
+        if response.status_code == 404:
+            raise Exception(f"Repository \"{owner}/{repository}\" not found.")
+        else:
+            raise Exception(f"Non-success status code: {response.status_code} - {response.text}")
+
+
+    print(f"Handle workflows in GitHub repository \"{owner}/{repository}\".")
     print("Get all workflows ...")
     all_workflows = get_all_workflows(owner, repository, token)
     if all_workflows['total_count'] == 0:
